@@ -29,8 +29,8 @@ class UserInfoWidget extends StatelessWidget {
                     SnackBar(
                       content: Text(
                         controller.isSaved
-                            ? 'Usuário removido dos favoritos'
-                            : 'Usuário adicionado aos favoritos',
+                            ? 'User removed from bookmarks'
+                            : 'User added to bookmarks',
                       ),
                       duration: Duration(seconds: 1),
                     ),
@@ -60,7 +60,7 @@ class UserInfoWidget extends StatelessWidget {
                 // width: 120,
                 child: Text(
                   controller.userEntity.location ??
-                      'Localização não disponível',
+                      'Localization not available',
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,
                   style: AppTypography.subtitle(context),
@@ -75,7 +75,7 @@ class UserInfoWidget extends StatelessWidget {
               SizedBox(width: 10),
               Container(
                 child: Text(
-                  controller.userEntity.email ?? 'Email não disponível',
+                  controller.userEntity.email ?? 'Email not available',
                   style: AppTypography.subtitle(context),
                 ),
               ),
@@ -86,7 +86,7 @@ class UserInfoWidget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: Text(
-              controller.userEntity.bio ?? 'Nenhuma descrição',
+              controller.userEntity.bio ?? 'No description',
               style: AppTypography.bodyText(context),
             ),
           ),

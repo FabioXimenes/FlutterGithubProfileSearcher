@@ -29,6 +29,7 @@ class _StartPageState extends State<StartPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Github'),
+        brightness: Brightness.dark,
       ),
       body: PageView(
           controller: pageController,
@@ -40,9 +41,9 @@ class _StartPageState extends State<StartPage> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Buscar'),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.bookmark_outline), label: 'Salvos'),
+              icon: Icon(Icons.bookmark_outline), label: 'Bookmarks'),
         ],
         onTap: (index) {
           setState(() {
