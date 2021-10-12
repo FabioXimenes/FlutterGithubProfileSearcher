@@ -23,7 +23,7 @@ class ProfileBackgroundHeaderWidget extends StatelessWidget {
         child: Align(
           alignment: Alignment.centerLeft,
           child: Text(
-            'Perfil',
+            'Profile',
             style: AppTypography.profileHeaderStyle(context),
           ),
         ),

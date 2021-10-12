@@ -44,7 +44,7 @@ class _SearchPageState extends State<SearchPage> {
         ),
         child: Column(
           children: [
-            PageTitle(title: 'Busque por um perfil'),
+            PageTitle(title: 'Search a profile'),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Form(
@@ -52,7 +52,7 @@ class _SearchPageState extends State<SearchPage> {
                 child: TextFormField(
                   controller: textController,
                   decoration: InputDecoration(
-                      hintText: 'Nome',
+                      hintText: 'Name',
                       suffixIcon: IconButton(
                         icon: Icon(Icons.search),
                         onPressed: _searchUsers,
@@ -61,7 +61,7 @@ class _SearchPageState extends State<SearchPage> {
                   onEditingComplete: _searchUsers,
                   validator: (value) {
                     return value == null || value == ''
-                        ? 'Digite o nome que deseja buscar'
+                        ? 'Type the name you want to search'
                         : null;
                   },
                 ),
@@ -90,7 +90,6 @@ Widget _getWidgetBasedOnStatus(UsersStore controller) {
   }
 
   return controller.users.users.isEmpty
-      ? NoUserFoundWidget(
-          message: 'Nenhum usuário encontrado com o nome informado')
+      ? NoUserFoundWidget(message: 'No user found with this name')
       : GithubUsersListWidget(usersEntity: controller.users);
 }

@@ -34,7 +34,7 @@ class _BookmarksPageState extends State<BookmarksPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            PageTitle(title: 'Perfis salvos'),
+            PageTitle(title: 'Saved profiles'),
             Expanded(
               child: Observer(
                 builder: (context) =>
